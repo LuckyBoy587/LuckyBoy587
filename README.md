@@ -1,4 +1,8 @@
-# Hi, I'm Kowshik Baskaran <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7W/giphy.gif" width="28">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="header.svg">
+  <source media="(prefers-color-scheme: light)" srcset="header.svg">
+  <img alt="Kowshik Baskaran Profile" src="header.svg" width="100%">
+</picture>
 
 I specialize in building scalable, resilient full-stack applications with robust backend architectures and highly polished, interactive user interfaces. Currently, I am focused on mastering enterprise-grade systems and refining my problem-solving capabilities.
 
@@ -6,8 +10,9 @@ I specialize in building scalable, resilient full-stack applications with robust
 
 ### ⚡ Key Milestones
 
-> 🏢 **ServiceNow** — Incoming Software Engineer Intern  
-> 🏆 **Competitive Programming** — 1,100+ LeetCode Problems Solved  
+<picture>
+  <img alt="Milestones & Achievements" src="milestones.svg" width="100%">
+</picture>
 
 ---
 
