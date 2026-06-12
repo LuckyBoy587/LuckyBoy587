@@ -39,4 +39,6 @@ I specialize in building scalable, resilient full-stack applications with robust
 
 ### 📬 Connect & Collaborate
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-121212?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/kowshi587) &nbsp; [![Email](https://img.shields.io/badge/Email-121212?style=flat-square&logo=gmail&logoColor=white)](mailto:kowshik@example.com) &nbsp; [![LeetCode](https://img.shields.io/badge/LeetCode-121212?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/kowshi587)
+<picture>
+  <img alt="Connect & Collaborate" src="connect.svg" width="100%">
+</picture>

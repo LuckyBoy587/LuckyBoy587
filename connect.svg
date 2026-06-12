@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 80" width="100%" height="80" fill="none">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    
+    .connect-container {
+      display: flex;
+      gap: 16px;
+      padding: 5px;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .btn {
+      flex: 1;
+      border-radius: 12px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 0;
+      transform: translateY(15px);
+      animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .btn:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    .btn:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .btn-linkedin {
+      background: linear-gradient(#09090b, #09090b) padding-box,
+                  linear-gradient(135deg, #0A66C2 0%, rgba(30, 30, 32, 0.6) 100%) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 15px rgba(10, 102, 194, 0.04);
+    }
+
+    .btn-email {
+      background: linear-gradient(#09090b, #09090b) padding-box,
+                  linear-gradient(135deg, #EA4335 0%, rgba(30, 30, 32, 0.6) 100%) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 15px rgba(234, 67, 53, 0.04);
+    }
+
+    .btn-linkedin:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(#0d0d0f, #0d0d0f) padding-box,
+                  linear-gradient(135deg, #0A66C2 0%, #ffffff 100%) border-box;
+      box-shadow: 0 8px 25px rgba(10, 102, 194, 0.16);
+    }
+
+    .btn-email:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(#0d0d0f, #0d0d0f) padding-box,
+                  linear-gradient(135deg, #EA4335 0%, #ffffff 100%) border-box;
+      box-shadow: 0 8px 25px rgba(234, 67, 53, 0.16);
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover .icon {
+      transform: scale(1.1);
+    }
+
+    .btn-linkedin .icon svg {
+      fill: #0A66C2;
+      transition: fill 0.3s ease;
+    }
+
+    .btn-email .icon svg {
+      fill: #EA4335;
+      transition: fill 0.3s ease;
+    }
+
+    .btn:hover .icon svg {
+      fill: #ffffff !important;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <foreignObject x="0" y="0" width="800" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="connect-container">
+      <!-- LinkedIn -->
+      <a class="btn btn-linkedin" href="https://linkedin.com/in/kowshi587" target="_blank">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </div>
+        <span>LinkedIn</span>
+      </a>
+
+      <!-- Email -->
+      <a class="btn btn-email" href="mailto:kowshik@example.com" target="_blank">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </div>
+        <span>Email Me</span>
+      </a>
+    </div>
+  </foreignObject>
+</svg>
