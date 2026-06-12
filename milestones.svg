@@ -11,16 +11,14 @@
 
     .card {
       flex: 1;
-      background: #09090b;
-      border: 1px solid #1e1e20;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 14px 20px;
       display: flex;
       align-items: center;
       gap: 14px;
       color: #ffffff;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       opacity: 0;
       transform: translateY(15px);
       animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -33,11 +31,32 @@
       animation-delay: 0.4s;
     }
 
-    .card:hover {
-      border-color: #ffffff;
-      background: #0d0d0f;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    .card-servicenow {
+      background: linear-gradient(#09090b, #09090b) padding-box,
+                  linear-gradient(135deg, #62D84E 0%, rgba(30, 30, 32, 0.6) 100%) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 15px rgba(98, 216, 78, 0.04);
+    }
+
+    .card-leetcode {
+      background: linear-gradient(#09090b, #09090b) padding-box,
+                  linear-gradient(135deg, #FFA116 0%, rgba(30, 30, 32, 0.6) 100%) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 15px rgba(255, 161, 22, 0.04);
+    }
+
+    .card-servicenow:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(#0c0c0f, #0c0c0f) padding-box,
+                  linear-gradient(135deg, #62D84E 0%, #ffffff 100%) border-box;
+      box-shadow: 0 8px 25px rgba(98, 216, 78, 0.16);
+    }
+
+    .card-leetcode:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(#0c0c0f, #0c0c0f) padding-box,
+                  linear-gradient(135deg, #FFA116 0%, #ffffff 100%) border-box;
+      box-shadow: 0 8px 25px rgba(255, 161, 22, 0.16);
     }
 
     .icon-wrapper {
@@ -47,33 +66,38 @@
       width: 36px;
       height: 36px;
       background: #141417;
-      border-radius: 6px;
+      border-radius: 8px;
       border: 1px solid #27272a;
-      transition: border-color 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    .card-servicenow .icon-wrapper {
+      border-color: rgba(98, 216, 78, 0.4);
+    }
+
+    .card-leetcode .icon-wrapper {
+      border-color: rgba(255, 161, 22, 0.4);
+    }
+
+    .card-servicenow:hover .icon-wrapper {
+      border-color: #62D84E;
+      box-shadow: 0 0 10px rgba(98, 216, 78, 0.2);
+    }
+
+    .card-leetcode:hover .icon-wrapper {
+      border-color: #FFA116;
+      box-shadow: 0 0 10px rgba(255, 161, 22, 0.2);
     }
 
     .icon-wrapper svg {
-      fill: #e4e4e7;
+      fill: #62D84E;
       transition: fill 0.3s ease;
     }
 
     .leetcode-logo {
-      opacity: 0.85;
-      filter: grayscale(100%) brightness(0.9);
-      transition: opacity 0.3s ease, filter 0.3s ease;
-    }
-
-    .card:hover .icon-wrapper {
-      border-color: #ffffff;
-    }
-
-    .card:hover .icon-wrapper svg {
-      fill: #ffffff;
-    }
-
-    .card:hover .leetcode-logo {
       opacity: 1;
-      filter: grayscale(0%) brightness(1.1);
+      filter: none;
+      transition: opacity 0.3s ease, filter 0.3s ease;
     }
 
     .details {
@@ -106,7 +130,7 @@
   <foreignObject x="0" y="0" width="800" height="95">
     <div xmlns="http://www.w3.org/1999/xhtml" class="milestone-container">
       <!-- Card 1 -->
-      <a class="card" href="https://github.com/LuckyBoy587" target="_blank">
+      <a class="card card-servicenow" href="https://github.com/LuckyBoy587" target="_blank">
         <div class="icon-wrapper">
           <!-- ServiceNow SVG Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="490 25 90 80">
@@ -120,7 +144,7 @@
       </a>
 
       <!-- Card 2 -->
-      <a class="card" href="https://leetcode.com/kowshi587" target="_blank">
+      <a class="card card-leetcode" href="https://leetcode.com/kowshi587" target="_blank">
         <div class="icon-wrapper">
           <!-- LeetCode Base64 PNG Icon -->
           <img class="leetcode-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACgklEQVR4nGNgIBH4GEtyGWrJvFNTU/lvbyx5goGawMJChlNPQ/azurrafxDWVFP4TTPD1dRU/zubSi2miuEqKgzsepqyH2GGg7CtkdQ2ahr+CdlwL2uZvVQzXFcD1fCWNM3/L9db/3ux2vjw//3yHJQZrokaLI0pmv9fbbCB45drTV/dWmzGR475bLoaciiGp/orvXm5xmj/i9Um919tsEa25MXLVVo8JBou+wHZcDcL6UPICp6v0i97tR7JkjWmz/6v0mIjy3AvK5kj2BQ+X2WY+3K91T+4Jav1Gwiarq8p+xrZcD9bmeP41L9Yo5/2cp3Vv5frLf8+X21sjtdwRxOJJciGBzjInCboIgYGhrurjPn/L9LjJqhQQ1X+F8xwd0vZ2wxUBmyqqirQIkD5/8w0Bi5kyS0bNjhu3rjh/eaNG/4Tgf9s3rBhDorpHBwcsiIiwv9BWE9N5A+67cuWLN60ZNHC/8TjBb/QzWAU5uf4z87O9p+fl/1/ko+QG4oFyxaZL5o/787C+fMeE4MXL144GSOMLDS5P4AsAGFLTe5fnUnCUhQGOypwNeGLEOBjB1sAwra6PD/rQ7kkCOm7OUu28eZs+WqiLHEy5FvIzYViyY/KCG5xXOrvzpY7/HyJ/H8QvjNTNp0oSxz1eZYjW2Kjy/0jN5RHFF3dvblyJ2GGg/CN2bLhRFkA9okBz0pkS+z0eH6c6pbRAcndmCkpcm+ezFVkw2/Pkp3LQCpw1udejWzJ2Ymy/x4vlPvxdLHcP2TDb82WXUSy4TDgasy7UlqU43+wDd//Z4sRhoLwM0oNh4Ebs6Sd7s6Tu/F4gdwfkCWPF8n9vT9P9uH12TJRxBgAABE1rBTkH+ppAAAAAElFTkSuQmCC" width="18" height="18" alt="LeetCode" />
